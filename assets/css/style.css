@@ -519,6 +519,26 @@ h6 {
   }
 }
 
+@media (max-width: 375px) {
+  #hero .carousel-content img {
+    max-width: 80%;
+  }
+
+  #hero h2 {
+    font-size: 20px;
+  }
+
+  #hero p {
+    width: 95%;
+    font-size: 12px;
+  }
+
+  #hero .btn-get-started {
+    font-size: 10px;
+    padding: 6px 18px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
