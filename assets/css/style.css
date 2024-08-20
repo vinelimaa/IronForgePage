@@ -480,19 +480,42 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  #hero .carousel-content img {
+    max-width: 80%;
+  }
+
   #hero h2 {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  #hero p {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  #hero .btn-get-started {
+    font-size: 12px;
+    padding: 8px 24px;
   }
 }
 
-@media (min-width: 1024px) {
-  #hero p {
-    width: 60%;
+@media (max-width: 576px) {
+  #hero .carousel-content img {
+    max-width: 80%;
   }
 
-  #hero .carousel-control-prev,
-  #hero .carousel-control-next {
-    width: 5%;
+  #hero h2 {
+    font-size: 20px;
+  }
+
+  #hero p {
+    width: 95%;
+    font-size: 12px;
+  }
+
+  #hero .btn-get-started {
+    font-size: 10px;
+    padding: 6px 18px;
   }
 }
 
@@ -583,6 +606,16 @@ section {
 @media (max-width: 667px) {
   .about .image img {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    max-width: 90%;
+    margin: auto;
+  }
+  .about h3 {
+    text-align: center;
   }
 }
 
@@ -1363,77 +1396,6 @@ section {
   color: #fff;
   position: relative;
   padding-bottom: 12px;
-}
-
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#footer .footer-top .footer-links ul i {
-  padding-right: 2px;
-  color: #df4742;
-  font-size: 18px;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
-#footer .footer-top .footer-links ul a {
-  color: #fff;
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul a:hover {
-  color: #e7332d;
-}
-
-#footer .footer-top .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 4px;
-}
-
-#footer .footer-top .footer-newsletter form input[type=email] {
-  border: 0;
-  padding: 4px;
-  width: calc(100% - 110px);
-}
-
-#footer .footer-top .footer-newsletter form input[type=submit] {
-  position: absolute;
-  top: 0;
-  right: -2px;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: #e0332c;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 0 4px 4px 0;
-}
-
-#footer .footer-top .footer-newsletter form input[type=submit]:hover {
-  background: #e0332c;
 }
 
 #footer .copyright {
