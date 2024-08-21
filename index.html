@@ -48,7 +48,6 @@
     
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Início</a></li>
           <li><a class="nav-link scrollto" href="#about">Quem Somos</a></li>
           <li><a class="nav-link scrollto" href="#services">Serviços</a></li>
           <li><a class="nav-link scrollto" href="#pricing">Planos</a></li>
@@ -57,6 +56,10 @@
         </ul>
       </nav>
     
+      <!-- Botão de Menu Mobile -->
+      <button class="mobile-nav-toggle bi-three-dots-vertical"></button>
+
+
     </div>
   </header><!-- End Header -->
 
@@ -415,6 +418,15 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
+      document.querySelector('#header').classList.toggle('navbar-mobile-active');
+      this.classList.toggle('bi-list');
+      this.classList.toggle('bi-x');
+    });
+  </script>
+  
 
 </body>
 

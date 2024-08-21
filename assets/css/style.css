@@ -125,6 +125,7 @@ h6 {
   color: rgba(255, 255, 255, 0.7);
   padding: 10px 15px;
   text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   position: relative;
@@ -170,10 +171,7 @@ h6 {
   color: #fff;
 }
 
-
-/**
-* Mobile Navigation 
-*/
+/* Estilo do botão de menu */
 .mobile-nav-toggle {
   color: #fff;
   font-size: 28px;
@@ -181,117 +179,114 @@ h6 {
   display: none;
   line-height: 0;
   transition: 0.5s;
+  background: none;
+  border: none;
 }
 
-.mobile-nav-toggle.bi-x {
-  color: #e0332c;
+.mobile-nav-toggle.bi-list::before {
+  content: "\f263"; /* Ícone de lista (menu) */
 }
 
+.mobile-nav-toggle.bi-x::before {
+  content: "\f00d"; /* Ícone de X (fechar) */
+}
+
+/* Estilo para telas menores (versão mobile) */
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
   }
 
-  .navbar ul {
+  .navbar {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 25%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
     display: none;
+    width: 25%;
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul li {
+    margin: 10px 0; /* Espaçamento vertical entre os itens no mobile */
+  }
+
+  .navbar-mobile-active .navbar {
+    display: block;
+  }
+
+  .navbar-mobile ul {
+    display: block;
+    position: relative;
+    padding: 10px 0;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+  }
+
+  .navbar ul li a {
+    color: #0e0c0c; /* Certifique-se de que a cor do texto seja visível */
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: 8px;
+    position: relative;
+    transition: color 0.3s;
+  }
+
+  .navbar-mobile a,
+  .navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #2a2a2a;
+  }
+
+  .navbar-mobile a:hover,
+  .navbar-mobile .active,
+  .navbar-mobile li:hover>a {
+    color: #e0332c;
+  }
+
+  .navbar-mobile .getstarted {
+    margin: 15px 0;
+    color: #e0332c;
+    padding-left: 15px;
+  }
+
+  .navbar-mobile .dropdown ul {
+    position: static;
+    display: none;
+    margin: 10px 0;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  }
+
+  .navbar-mobile .dropdown ul li {
+    min-width: 200px;
+  }
+
+  .navbar-mobile .dropdown ul a {
+    padding: 10px 20px;
+  }
+
+  .navbar-mobile .dropdown ul a:hover,
+  .navbar-mobile .dropdown ul .active:hover,
+  .navbar-mobile .dropdown ul li:hover>a {
+    color: #e0332c;
+  }
+
+  .navbar-mobile .dropdown>.dropdown-active {
+    display: block;
   }
 }
 
-.navbar-mobile {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(17, 17, 17, 0.9);
-  transition: 0.3s;
-  z-index: 999;
-}
-
-.navbar-mobile .mobile-nav-toggle {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-.navbar-mobile ul {
-  display: block;
-  position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  padding: 10px 0;
-  background-color: #fff;
-  overflow-y: auto;
-  transition: 0.3s;
-}
-
-.navbar-mobile a,
-.navbar-mobile a:focus {
-  padding: 10px 20px;
-  font-size: 15px;
-  color: #2a2a2a;
-}
-
-.navbar-mobile a:hover,
-.navbar-mobile .active,
-.navbar-mobile li:hover>a {
-  color: #e0332c;
-}
-
-.navbar-mobile>ul>li {
-  white-space: nowrap;
-  padding: 0;
-}
-
-.navbar-mobile a:hover:before,
-.navbar-mobile li:hover>a:before,
-.navbar-mobile .active:before {
-  visibility: hidden;
-}
-
-.navbar-mobile .getstarted,
-.navbar-mobile .getstarted:focus {
-  margin: 15px;
-  color: #e0332c;
-  padding-left: 15px;
-}
-
-.navbar-mobile .dropdown ul {
-  position: static;
-  display: none;
-  margin: 10px 20px;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 1;
-  visibility: visible;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-}
-
-.navbar-mobile .dropdown ul li {
-  min-width: 200px;
-}
-
-.navbar-mobile .dropdown ul a {
-  padding: 10px 20px;
-}
-
-.navbar-mobile .dropdown ul a i {
-  font-size: 12px;
-}
-
-.navbar-mobile .dropdown ul a:hover,
-.navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
-  color: #e0332c;
-}
-
-.navbar-mobile .dropdown>.dropdown-active {
-  display: block;
-}
 
 /*--------------------------------------------------------------
 # Hero Section
