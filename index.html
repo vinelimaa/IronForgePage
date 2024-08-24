@@ -51,8 +51,8 @@
           <li><a class="nav-link scrollto" href="#about">Quem Somos</a></li>
           <li><a class="nav-link scrollto" href="#services">Serviços</a></li>
           <li><a class="nav-link scrollto" href="#pricing">Planos</a></li>
-          <li><a class="nav-link scrollto" href="#faq">Perguntas Frequentes</a></li> <!-- Novo item -->
-          <li><a class="nav-link scrollto" href="#footer">Contato</a></li> <!-- Novo item -->
+          <li><a class="nav-link scrollto" href="#faq">Perguntas Frequentes</a></li>
+          <li><a class="nav-link scrollto" href="#footer">Contato</a></li>
         </ul>
       </nav>
     
@@ -420,14 +420,22 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
-      document.querySelector('#header').classList.toggle('navbar-mobile-active');
-      this.classList.toggle('bi-list');
-      this.classList.toggle('bi-x');
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
+      const navbar = document.querySelector('#header');
+      const toggleButton = this;
+  
+      navbar.classList.toggle('navbar-mobile-active'); // Ativa/desativa o menu mobile
+      
+      // Alterna entre os ícones de lista (menu) e X (fechar)
+      if (navbar.classList.contains('navbar-mobile-active')) {
+        toggleButton.classList.remove('bi-list');
+        toggleButton.classList.add('bi-x');
+      } else {
+        toggleButton.classList.remove('bi-x');
+        toggleButton.classList.add('bi-list');
+      }
     });
   </script>
-  
-
 </body>
 
 </html>
