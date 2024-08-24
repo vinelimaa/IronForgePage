@@ -212,6 +212,11 @@ h6 {
 /* Estilo para telas menores (versão mobile) */
 @media (max-width: 991px) {
   .mobile-nav-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
     display: block;
   }
 
