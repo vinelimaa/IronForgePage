@@ -92,11 +92,13 @@ h6 {
   height: 70px;
 }
 
+#header .container {
+  padding-left: 0;
+}
+
 #header .logo img {
   max-height: 60px;
-  position: absolute;
-  left: 0;
-  top: 0;
+  max-width: 196px;
 }
 
 /*--------------------------------------------------------------
@@ -184,6 +186,11 @@ h6 {
   transition: 0.5s;
   background: none;
   border: none;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
 }
 
 /* Ícone inicial */
@@ -194,6 +201,12 @@ h6 {
 /* Ícone de fechar */
 .mobile-nav-toggle.bi-x::before {
   font-family: "Bootstrap Icons"; 
+}
+
+@media (min-width: 991px) and (max-width: 1100px) {
+.navbar ul li a {
+  font-size: 14px;
+}
 }
 
 /* Estilo para telas menores (versão mobile) */
@@ -300,16 +313,15 @@ h6 {
     --------------------------------------------------------------*/
 
   #hero .carousel-content img {
-    max-width: 80%;
+    max-width: 100%;
   }
 
   #hero h2 {
-    font-size: 20px;
+    font-size: 36px !important;
   }
 
   #hero p {
-    width: 95%;
-    font-size: 12px;
+    font-size: 18px !important;
   }
 
   #hero .btn-get-started {
