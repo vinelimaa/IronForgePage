@@ -57,7 +57,7 @@
           </ul>
         </nav>
         <!-- Botão de Menu Mobile -->
-        <button class="mobile-nav-toggle bi-three-dots-vertical"></button>
+        <button class="mobile-nav-toggle bi bi-list"></button>
       </div>
     </div>
   </div>
@@ -423,14 +423,6 @@
     // Evento para alternar o menu mobile
     toggleButton.addEventListener('click', function() {
       navbar.classList.toggle('navbar-mobile-active');
-      
-      if (navbar.classList.contains('navbar-mobile-active')) {
-        toggleButton.classList.remove('bi-three-dots-vertical');
-        toggleButton.classList.add('bi-x');
-      } else {
-        toggleButton.classList.remove('bi-x');
-        toggleButton.classList.add('bi-three-dots-vertical');
-      }
     });
   
     // Fecha o dropdown se clicar fora dele
@@ -438,7 +430,7 @@
       if (!navbar.contains(event.target) && navbar.classList.contains('navbar-mobile-active')) {
         navbar.classList.remove('navbar-mobile-active');
         toggleButton.classList.remove('bi-x');
-        toggleButton.classList.add('bi-three-dots-vertical');
+        toggleButton.classList.add('bi-list');
       }
     });
   
@@ -450,7 +442,7 @@
         navbar.classList.remove('navbar-mobile-active');
         // Muda o ícone de volta para os três pontos
         toggleButton.classList.remove('bi-x');
-        toggleButton.classList.add('bi-three-dots-vertical');
+        toggleButton.classList.add('bi-list');
       });
     });
   </script>
