@@ -15,7 +15,7 @@
 
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -70,11 +70,9 @@
   <section id="hero">
     <div class="hero-container">
       <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
         <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
         <div class="carousel-inner" role="listbox">
-
           <!-- Slide 1 -->
           <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.png)">
             <div class="carousel-container">
@@ -86,7 +84,6 @@
               </div>
             </div>
           </div>
-
           <!-- Slide 2 -->
           <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg);">
             <div class="carousel-container">
@@ -100,7 +97,6 @@
               </div>
             </div>
           </div>
-
           <!-- Slide 3 -->
           <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
             <div class="carousel-container">
@@ -114,13 +110,11 @@
               </div>
             </div>
           </div>
-
         </div>
 
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
         </a>
-
         <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
           <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
         </a>
@@ -422,6 +416,8 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
+  <!-- (O restante do código HTML permanece o mesmo) -->
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -432,65 +428,10 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
-    const toggleButton = document.querySelector('.mobile-nav-toggle');
-    const navbar = document.querySelector('#header');
+  <!-- Scripts Específicos -->
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/faq.js"></script>
 
-    // Evento para alternar o menu mobile
-    toggleButton.addEventListener('click', function () {
-      navbar.classList.toggle('navbar-mobile-active');
-    });
-
-    // Fecha o dropdown se clicar fora dele
-    document.addEventListener('click', function (event) {
-      if (!navbar.contains(event.target) && navbar.classList.contains('navbar-mobile-active')) {
-        navbar.classList.remove('navbar-mobile-active');
-        toggleButton.classList.remove('bi-x');
-        toggleButton.classList.add('bi-list');
-      }
-    });
-
-    // Fecha o dropdown e muda o ícone ao clicar em um item da lista
-    const navLinks = document.querySelectorAll('#navbar ul li a');
-    navLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
-        // Fecha o dropdown
-        navbar.classList.remove('navbar-mobile-active');
-        // Muda o ícone de volta para os três pontos
-        toggleButton.classList.remove('bi-x');
-        toggleButton.classList.add('bi-list');
-      });
-    });
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const faqItems = document.querySelectorAll('.faq-list a[data-bs-toggle="collapse"]');
-
-      faqItems.forEach(item => {
-        item.addEventListener('click', function (event) {
-          const targetId = this.getAttribute('data-bs-target');
-          const targetElement = document.querySelector(targetId);
-          const parentElement = this.closest('li');
-
-          if (targetElement.classList.contains('show')) {
-            return; // Se o item já está expandido, não faça nada
-          }
-
-          setTimeout(() => {
-            const offset = -100; // Define o deslocamento desejado (20px extra para cima)
-            const elementPosition = parentElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition + offset;
-
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }, 300); // Aguarde a animação de colapso antes de rolar
-        });
-      });
-    });
-  </script>
 </body>
 
 </html>
