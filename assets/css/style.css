@@ -226,14 +226,6 @@ h6 {
     max-height: 40px;
   }
 
-  .contact-button {
-    display: none;
-  }
-
-  .contact-button {
-    font-size: 10px;
-  }
-
   .navbar {
     position: absolute;
     top: 60px;
@@ -1015,9 +1007,6 @@ section {
   color: white;
   /* Mantém o texto branco */
 }
-
-
-
 
 
 /*--------------------------------------------------------------
