@@ -276,6 +276,14 @@ h6 {
     color: #2a2a2a;
   }
 
+  .navbar ul li a.active {
+    color: #e0332c;
+  }
+
+  .navbar ul li a:hover {
+    color: #fff;
+  }
+
   .navbar-mobile a:hover,
   .navbar-mobile .active,
   .navbar-mobile li:hover>a {
