@@ -244,9 +244,8 @@ h6 {
 
   .navbar ul li {
     margin: 10px 0;
-    /* Espaçamento vertical entre os itens no mobile */
   }
-
+  
   .navbar-mobile-active .navbar {
     display: block;
   }
