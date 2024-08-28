@@ -53,7 +53,8 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  left: 15px; /* Mova para a esquerda */
+  left: 15px;
+  /* Mova para a esquerda */
   bottom: 15px;
   z-index: 996;
   background: #e0332c;
@@ -116,11 +117,13 @@ h6 {
   list-style: none;
   align-items: center;
   flex-grow: 1;
-  justify-content: center; /* Alinha os itens do menu ao centro */
+  justify-content: center;
+  /* Alinha os itens do menu ao centro */
 }
 
 .navbar ul li {
-  margin: 0 15px; /* Espaçamento entre os itens do menu */
+  margin: 0 15px;
+  /* Espaçamento entre os itens do menu */
 }
 
 .navbar ul li a {
@@ -129,7 +132,7 @@ h6 {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   position: relative;
   transition: color 0.3s;
 }
@@ -158,7 +161,8 @@ h6 {
 }
 
 .navbar .getstarted {
-  margin-left: auto; /* Mantém o botão Login à direita */
+  margin-left: auto;
+  /* Mantém o botão Login à direita */
   padding: 8px 25px;
   border-radius: 4px;
   color: #fff;
@@ -192,18 +196,18 @@ h6 {
 
 /* Ícone inicial */
 .mobile-nav-toggle.bi-list::before {
-  font-family: "Bootstrap Icons"; 
+  font-family: "Bootstrap Icons";
 }
 
 /* Ícone de fechar */
 .mobile-nav-toggle.bi-x::before {
-  font-family: "Bootstrap Icons"; 
+  font-family: "Bootstrap Icons";
 }
 
 @media (min-width: 991px) and (max-width: 1100px) {
-.navbar ul li a {
-  font-size: 14px;
-}
+  .navbar ul li a {
+    font-size: 14px;
+  }
 }
 
 /* Estilo para telas menores (versão mobile) */
@@ -220,6 +224,10 @@ h6 {
   #header .logo img {
     top: 13px;
     max-height: 40px;
+  }
+
+  .contact-button {
+    display: none;
   }
 
   .navbar {
@@ -239,7 +247,8 @@ h6 {
   }
 
   .navbar ul li {
-    margin: 10px 0; /* Espaçamento vertical entre os itens no mobile */
+    margin: 10px 0;
+    /* Espaçamento vertical entre os itens no mobile */
   }
 
   .navbar-mobile-active .navbar {
@@ -334,7 +343,7 @@ h6 {
   #hero .carousel-control-next-icon,
   #hero .carousel-control-prev-icon {
     display: none !important;
-  } 
+  }
 
   /*--------------------------------------------------------------
   # Contact (Mobile)
@@ -634,6 +643,7 @@ section {
     max-width: 90%;
     margin: auto;
   }
+
   .about h3 {
     text-align: center;
   }
@@ -938,18 +948,72 @@ section {
   }
 }
 
-/* Estilo do botão de WhatsApp */
 .whatsapp-button {
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 20px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: transparent;
+  /* Transparente inicialmente */
+  border-radius: 40px;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
   z-index: 1000;
+  transition: background-color 0.4s ease, width 0.4s ease, padding 0.4s ease;
 }
 
-.whatsapp-button img {
-  width: 50px;
-  height: 50px;
+.whatsapp-static-icon {
+  width: 180%;
+  height: 180%;
+  display: block;
+  transition: opacity 0.4s ease;
 }
+
+.whatsapp-content {
+  display: none;
+  /* Esconde inicialmente */
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #25D366;
+  /* Verde no hover */
+  padding: 10px 20px;
+  width: auto;
+}
+
+.whatsapp-button:hover .whatsapp-static-icon {
+  display: none;
+  /* Esconde a imagem estática no hover */
+}
+
+.whatsapp-button:hover .whatsapp-content {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+.whatsapp-content i {
+  font-size: 20px;
+  color: white;
+  margin-right: 8px;
+}
+
+.whatsapp-text {
+  color: white;
+  /* Mantém o texto branco */
+}
+
+
+
 
 
 /*--------------------------------------------------------------
@@ -1028,9 +1092,12 @@ section {
   text-align: center;
 }
 
-
 #footer .footer-top .footer-info {
   margin-bottom: 30px;
+}
+
+#footer .footer-info img {
+  width: 200px;
 }
 
 #footer .footer-top .footer-info h3 {
