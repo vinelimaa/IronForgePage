@@ -204,7 +204,7 @@ h6 {
   font-family: "Bootstrap Icons";
 }
 
-@media (min-width: 991px) and (max-width: 1100px) {
+@media (min-width: 991px) and (max-width: 1230px) {
   .navbar ul li a {
     font-size: 14px;
   }
@@ -228,6 +228,10 @@ h6 {
 
   .contact-button {
     display: none;
+  }
+
+  .contact-button {
+    font-size: 10px;
   }
 
   .navbar {
